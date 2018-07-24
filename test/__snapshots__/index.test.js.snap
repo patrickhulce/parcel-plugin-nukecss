@@ -1,3 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`lib/index.js simple case should eliminate unused css 1`] = `".used-html{color:#000}.used-js-key,.used-js-value{color:red}"`;
+exports[`lib/index.js simple case should eliminate unused css 1`] = `
+".used-html{color:#000}
+.used-js-key,.used-js-value{color:red}
+
+
+/*!
+ *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
+ *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
+ */@font-face{font-family:FontAwesome;font-style:normal;font-weight:400;src:url(fontawesome-webfont.3db5e78b.eot?v=4.7.0);src:url(fontawesome-webfont.3db5e78b.eot?#iefix&v=4.7.0) format(\\"embedded-opentype\\"),url(fontawesome-webfont.d5c2a0ed.woff2?v=4.7.0) format(\\"woff2\\"),url(fontawesome-webfont.259a7639.woff?v=4.7.0) format(\\"woff\\"),url(fontawesome-webfont.f1476b65.ttf?v=4.7.0) format(\\"truetype\\"),url(fontawesome-webfont.b182d561.svg?v=4.7.0#fontawesomeregular) format(\\"svg\\")}
+.fa{-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;display:inline-block;font:normal normal normal 14px/1 FontAwesome;font-size:inherit;text-rendering:auto}
+@-webkit-keyframes fa-spin{0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}
+to{-webkit-transform:rotate(359deg);transform:rotate(359deg)}
+}
+@keyframes fa-spin{0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}
+to{-webkit-transform:rotate(359deg);transform:rotate(359deg)}
+}
+.fa-close:before,.fa-remove:before,.fa-times:before{content:\\"\\\\f00d\\"}
+"
+`;

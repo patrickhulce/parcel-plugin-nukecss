@@ -1,17 +1,10 @@
 const path = require('path')
 const Bundler = require('parcel-bundler')
 const plugin = require('../lib')
+const CSSPackager = require('../lib/css-packager')
 
 const DIST = path.join(__dirname, 'dist')
 const simple = path.join(__dirname, 'fixtures/simple.html')
-
-function findCSSBundle(bundle) {
-  for (const child of bundle.childBundles) {
-    if (child.type === 'css') return child
-    const recursive = findCSSBundle(child)
-    if (recursive) return recursive
-  }
-}
 
 /* eslint-env jest */
 
@@ -30,12 +23,18 @@ describe('lib/index.js', () => {
       plugin(bundler)
     })
 
-    it('should eliminate unused css', async () => {
-      bundle = await bundler.bundle()
-      const cssBundle = findCSSBundle(bundle)
-      const css = [...cssBundle.assets][0].generated.css
+    it(
+      'should eliminate unused css',
+      async () => {
+        bundle = await bundler.bundle()
+        const css = Array.from(CSSPackager.collectAllAssets(bundle))
+          .map(asset => asset.generated.css)
+          .filter(Boolean)
+          .join('\n\n')
 
-      expect(css).toMatchSnapshot()
-    })
+        expect(css.replace(/}/g, '}\n')).toMatchSnapshot()
+      },
+      15000,
+    )
   })
 })
