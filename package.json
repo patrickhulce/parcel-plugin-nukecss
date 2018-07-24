@@ -4,6 +4,7 @@
   "description": "Remove unused CSS from parcel assets.",
   "main": "./lib/index.js",
   "scripts": {
+    "start": "node ./test/fixtures/run.js test/fixtures/simple.html",
     "clean": "find . -type d -name .cache -delete",
     "test": "npm run test:lint && npm run test:unit",
     "test:unit": "jest",
