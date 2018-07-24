@@ -1,0 +1,15 @@
+.unused {
+  color: white;
+}
+
+.used-html {
+  color: black;
+}
+
+.used-js-key {
+  color: red;
+}
+
+.used-js-value {
+  color: red;
+}

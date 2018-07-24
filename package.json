@@ -1,0 +1,33 @@
+{
+  "name": "parcel-plugin-nukecss",
+  "version": "0.0.0-development",
+  "description": "Remove unused CSS from parcel assets.",
+  "main": "./lib/index.js",
+  "scripts": {
+    "test": "npm run test:lint && npm run test:unit",
+    "test:unit": "jest",
+    "test:lint": "lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/patrickhulce/parcel-plugin-nukecss.git"
+  },
+  "author": "Patrick Hulce <patrick.hulce@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/patrickhulce/parcel-plugin-nukecss#readme",
+  "bugs": {
+    "url": "https://github.com/patrickhulce/parcel-plugin-nukecss/issues"
+  },
+  "devDependencies": {
+    "@patrickhulce/lint": "^3.0.2",
+    "jest": "^23.4.1",
+    "parcel-bundler": "1.9.7",
+    "ts-jest": "^23.0.1",
+    "tslint": "^5.11.0",
+    "typescript": "^2.9.2"
+  },
+  "dependencies": {
+    "lodash": "^4.17.10",
+    "nukecss": "^1.9.0"
+  }
+}

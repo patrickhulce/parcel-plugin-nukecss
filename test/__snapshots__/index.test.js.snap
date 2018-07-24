@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`lib/index.js simple case should eliminate unused css 1`] = `".used-html{color:#000}.used-js-key,.used-js-value{color:red}"`;
